@@ -48,8 +48,7 @@
 		"production:tailwind:editor": "cross-env NODE_ENV=production npm run development:tailwind:editor -- --minify",
 		"production:tailwind:editor:extra": "cross-env NODE_ENV=production npm run development:tailwind:editor:extra -- --minify",
 		"production:esbuild": "npm run development:esbuild -- --minify",
-		"production": "run-p \"production:**\"",
-		"prod": "npm run production",
+		"prod": "npm run \"production:**\"",
 		"zip": "node node_scripts/zip.js avandemy",
 		"bundle": "run-s production zip"
 	},
