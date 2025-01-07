@@ -13,7 +13,6 @@ module.exports = {
 	theme: {
 		// Extend the default Tailwind theme.
 		extend: {
-			'color': #fff;
 		},
 	},
 	corePlugins: {
