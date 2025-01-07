@@ -31,4 +31,3 @@ jobs:
           npm install
           npm run prod
           npm run bundle
-          7zip x avandemy.zip
