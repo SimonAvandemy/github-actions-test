@@ -5,10 +5,10 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "live" branch
-  push:
-    branches: [ "live", "staging" ]
+  # push:
+  #   branches: [ "live", "staging" ]
   pull_request:
-    branches: [ "live", "staging" ]
+    branches: [ "staging" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,8 +26,11 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a set of commands using the runners shell
-      - name: Minify and build the theme
-        run: |
-          npm install
-          npm run prod
-          npm run bundle
+      - name: Install dependencies
+        run: npm install
+
+      - name: Minify files
+        run: npm run prod
+
+      - name: Bundle theme together
+        run: npm run bundle
